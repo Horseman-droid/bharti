@@ -132,10 +132,10 @@ $(document).ready(function() {
 			slidesHtml = '<ul class="slides">',
 			elemDataCont = elem.find('.project-description');
 
-			slides = elem.find('.project-description').data('images').split(',');
+			l=elem.find('.project-description').data('images').split(',');
 
-		for (var i = 0; i < slides.length; ++i) {
-			slidesHtml = slidesHtml + '<li><img src='+slides[i]+' alt=""></li>';
+		for (var i = 0; i <l.length; ++i) {
+			slidesHtml = slidesHtml + '<li><img src='+l[i]+' alt=""></li>';
 		}
 		
 		slidesHtml = slidesHtml + '</ul>';
@@ -172,7 +172,7 @@ $(document).ready(function() {
 				$('.screen.flexslider').flexslider({
 					prevText: '<i class="fa fa-angle-left"></i>',
 					nextText: '<i class="fa fa-angle-right"></i>',
-					slideshowSpeed: 3000,
+					slideshowSpeed: 1000,
 					animation: 'slide',
 					controlNav: false,
 					pauseOnAction: false, 
